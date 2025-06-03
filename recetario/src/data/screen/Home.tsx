@@ -1,23 +1,34 @@
-import { View, Text, TextInput, StyleSheet } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
-import React from 'react'
-
+import { View, Text, TextInput, StyleSheet, FlatList } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import recipesData from "../recipes.json";
 const Home = () => {
+  const Item = ({ category }: ItemProps) => (
+    <view><TouchableOpacity></TouchableOpacity></view>
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+    </View>
+  );
   return (
     <View style={styles.container}>
       <View style={styles.search}>
-      <Ionicons name="search" size={17} color="black"></Ionicons>
-      <TextInput
-        style={styles.input}
-        placeholder="What do you want to eat?"
-        //onChangeText={handleSearchTextChange}
-        //value={searchText}
+        <Ionicons name="search" size={17} color="black"></Ionicons>
+        <TextInput
+          style={styles.input}
+          placeholder="What do you want to eat?"
+          //onChangeText={handleSearchTextChange}
+          //value={searchText}
         />
         <Ionicons name="mic" size={20} color="black"></Ionicons>
       </View>
-      <Text>Home</Text>
+      <Text style={styles.title}>TRENDING</Text>
+      <FlatList
+        data={recipesData}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
+      />
     </View>
-  )
+  );
 };
 
 const styles = StyleSheet.create({
@@ -27,9 +38,10 @@ const styles = StyleSheet.create({
   },
 
   search: {
+    width: "100%",
     marginBottom: 15,
     flexDirection: "row",
-    borderColor: 'gray',
+    borderColor: "gray",
     borderWidth: 1,
     borderRadius: 10,
     alignItems: "center",
@@ -41,10 +53,15 @@ const styles = StyleSheet.create({
     height: 40,
     padding: 10,
     fontSize: 17,
-  }
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: 400,
+    color: "#AB1F60",
+  },
 });
 
-export default Home
+export default Home;
 
 // codigo copiado
 /*import React, { useState } from 'react';
