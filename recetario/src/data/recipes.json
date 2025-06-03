@@ -14,4 +14,3 @@
         ]
     }
 ]
-export const trending = () => recipes.filter(p => p.category === 'trending'); 

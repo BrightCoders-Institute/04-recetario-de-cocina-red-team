@@ -3,12 +3,6 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import recipesData from "../recipes.json";
 const Home = () => {
-  const Item = ({ category }: ItemProps) => (
-    <view><TouchableOpacity></TouchableOpacity></view>
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </View>
-  );
   return (
     <View style={styles.container}>
       <View style={styles.search}>
@@ -24,8 +18,8 @@ const Home = () => {
       <Text style={styles.title}>TRENDING</Text>
       <FlatList
         data={recipesData}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
+        keyExtractor={(item:any) => item.id}
+        renderItem={({ item }) => <Text>{item.name}</Text>}
       />
     </View>
   );
