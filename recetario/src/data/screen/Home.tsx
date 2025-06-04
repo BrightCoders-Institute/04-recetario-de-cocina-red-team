@@ -19,12 +19,14 @@ const Home = () => {
         />
         <Ionicons name="mic" size={20} color="black"></Ionicons>
       </View>
+      <View style={styles.card}>
       <Text style={styles.title}>TRENDING</Text>
-      <FlatList
+      <FlatList 
         horizontal={true}
         data={filterTrending}
         keyExtractor={(item:any) => item.id}
-        renderItem={({ item }) => <RecipeCard recipes={item} />}
+        renderItem={({ item }) => <RecipeCard recipes={item} />
+      }
       />
       <Text style={styles.title}>RECENT</Text>
        <FlatList
@@ -33,6 +35,7 @@ const Home = () => {
         keyExtractor={(item:any) => item.id}
         renderItem={({ item}) => <RecipeCard recipes={item} />}
       />
+      </View>
     </View>
   );
 };
@@ -65,6 +68,9 @@ const styles = StyleSheet.create({
     fontWeight: 400,
     color: "#AB1F60",
   },
+  card:{
+    justifyContent: "center"
+    }
 });
 
 export default Home;
