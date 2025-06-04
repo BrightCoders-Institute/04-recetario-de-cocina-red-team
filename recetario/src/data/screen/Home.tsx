@@ -2,6 +2,7 @@ import { View, Text, TextInput, StyleSheet, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import recipesData from "../recipes.json";
+
 const Home = () => {
   const filterTrending = recipesData.filter((p) => p.category === 'trending'); 
   const filterRecent = recipesData.filter((p) => p.category === 'recent');
@@ -29,7 +30,7 @@ const Home = () => {
         horizontal={true}
         data={filterRecent}
         keyExtractor={(item:any) => item.id}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
+        renderItem={({ item}) => <Text>{item.name}</Text>}
       />
     </View>
   );
