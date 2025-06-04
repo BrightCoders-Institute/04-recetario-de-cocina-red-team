@@ -12,5 +12,19 @@
             {"name":"Cinnamon Powder", "quatity":"1/4 tps"},
             {"name":"Vanilla essence", "quatity":"1/4 tps"}
         ]
+    },
+    {
+        "id": "2",
+        "name": "Pizza",
+        "image": "logo.png",
+        "category": "recent",
+        "servings": "1",
+        "ingredients":[
+            {"name":"Flour", "quatity":"1/2 cup"},
+            {"name":"Eggs", "quatity":"1"},
+            {"name":"Milk", "quatity":"1/4 cup"},
+            {"name":"Cinnamon Powder", "quatity":"1/4 tps"},
+            {"name":"Vanilla essence", "quatity":"1/4 tps"}
+        ]
     }
 ]
