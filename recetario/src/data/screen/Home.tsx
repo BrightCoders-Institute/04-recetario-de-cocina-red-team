@@ -3,6 +3,8 @@ import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import recipesData from "../recipes.json";
 const Home = () => {
+  const filterTrending = recipesData.filter((p) => p.category === 'trending'); 
+  const filterRecent = recipesData.filter((p) => p.category === 'recent');
   return (
     <View style={styles.container}>
       <View style={styles.search}>
@@ -18,7 +20,14 @@ const Home = () => {
       <Text style={styles.title}>TRENDING</Text>
       <FlatList
         horizontal={true}
-        data={recipesData}
+        data={filterTrending}
+        keyExtractor={(item:any) => item.id}
+        renderItem={({ item }) => <Text>{item.name}</Text>}
+      />
+      <Text style={styles.title}>RECENT</Text>
+       <FlatList
+        horizontal={true}
+        data={filterRecent}
         keyExtractor={(item:any) => item.id}
         renderItem={({ item }) => <Text>{item.name}</Text>}
       />
