@@ -17,6 +17,7 @@ const Home = () => {
       </View>
       <Text style={styles.title}>TRENDING</Text>
       <FlatList
+        horizontal={true}
         data={recipesData}
         keyExtractor={(item:any) => item.id}
         renderItem={({ item }) => <Text>{item.name}</Text>}
