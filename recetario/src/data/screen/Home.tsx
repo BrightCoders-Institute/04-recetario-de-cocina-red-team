@@ -5,8 +5,8 @@ import recipesData from "../recipes.json";
 import RecipeCard from "../../components/recipeCard";
 
 const Home = () => {
-  const filterTrending = recipesData.filter((p) => p.category === 'trending'); 
-  const filterRecent = recipesData.filter((p) => p.category === 'recent');
+  const filterTrending = recipesData.filter((p) => p.category === "trending");
+  const filterRecent = recipesData.filter((p) => p.category === "recent");
   return (
     <View style={styles.container}>
       <View style={styles.search}>
@@ -20,21 +20,20 @@ const Home = () => {
         <Ionicons name="mic" size={20} color="black"></Ionicons>
       </View>
       <View style={styles.card}>
-      <Text style={styles.title}>TRENDING</Text>
-      <FlatList 
-        horizontal={true}
-        data={filterTrending}
-        keyExtractor={(item:any) => item.id}
-        renderItem={({ item }) => <RecipeCard recipes={item} />
-      }
-      />
-      <Text style={styles.title}>RECENT</Text>
-       <FlatList 
-        horizontal={true}
-        data={filterRecent}
-        keyExtractor={(item:any) => item.id}
-        renderItem={({ item}) => <RecipeCard recipes={item} />}
-      />
+        <Text style={styles.title}>TRENDING</Text>
+        <FlatList
+          horizontal={true}
+          data={filterTrending}
+          keyExtractor={(item: any) => item.id}
+          renderItem={({ item }) => <RecipeCard recipes={item} />}
+        />
+        <Text style={styles.title}>RECENT</Text>
+        <FlatList
+          horizontal={true}
+          data={filterRecent}
+          keyExtractor={(item: any) => item.id}
+          renderItem={({ item }) => <RecipeCard recipes={item} />}
+        />
       </View>
     </View>
   );
@@ -55,6 +54,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
     paddingHorizontal: 10,
+    marginTop: 50,
   },
 
   input: {
@@ -67,11 +67,11 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 400,
     color: "#AB1F60",
-    marginVertical: 20
+    marginVertical: 20,
   },
-  card:{
+  card: {
     justifyContent: "center",
-    }
+  },
 });
 
 export default Home;

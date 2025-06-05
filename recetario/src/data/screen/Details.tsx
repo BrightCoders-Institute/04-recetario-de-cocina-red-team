@@ -1,18 +1,36 @@
 import React from "react";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { RootStackParamList } from "../../navigation/AppNavigator";
-import { View, Text } from "react-native";
-
+import { View, Text, Image, StyleSheet } from "react-native";
+import { getImage } from "../../utils/getImage";
 type DetailsRouteProp = RouteProp<RootStackParamList, "Details">;
 
 const Details = () => {
-    const route = useRoute<DetailsRouteProp>();
-    const {recipes} = route.params;
+  const route = useRoute<DetailsRouteProp>();
+  const { recipes } = route.params;
 
-    return(
-        <View>
-            <Text>{recipes.name}</Text>
-        </View>
-    )
-}
+  return (
+    <View style={styles.container}>
+      <Image source={getImage(recipes.image)} style={styles.backgroundImage} />
+      <Text>{recipes.name}</Text>
+    </View>
+  );
+};
 export default Details;
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#393E46",
+    flex: 1,
+
+    // flexDirection: "column",
+  },
+  backgroundImage: {
+    // objectFit: "contain",
+    resizeMode: "cover",
+    // width: "50%",
+    opacity: 0.5,
+    height: "50%",
+    width: "100%",
+    // height: "100%",
+  },
+});
