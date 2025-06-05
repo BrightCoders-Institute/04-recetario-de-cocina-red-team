@@ -29,7 +29,7 @@ const Home = () => {
       }
       />
       <Text style={styles.title}>RECENT</Text>
-       <FlatList
+       <FlatList 
         horizontal={true}
         data={filterRecent}
         keyExtractor={(item:any) => item.id}
@@ -67,9 +67,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 400,
     color: "#AB1F60",
+    marginVertical: 20
   },
   card:{
-    justifyContent: "center"
+    justifyContent: "center",
     }
 });
 
