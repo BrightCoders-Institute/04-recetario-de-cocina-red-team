@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "HotCakes",
-        "image": "logo.png",
+        "image": "hotcakes_id1.jpg",
         "category": "trending",
         "servings": "1",
         "ingredients":[
@@ -16,7 +16,7 @@
     {
         "id": "2",
         "name": "Pizza",
-        "image": "logo.png",
+        "image": "pizza_id2.jpg",
         "category": "recent",
         "servings": "1",
         "ingredients":[
@@ -26,5 +26,20 @@
             {"name":"Cinnamon Powder", "quatity":"1/4 tps"},
             {"name":"Vanilla essence", "quatity":"1/4 tps"}
         ]
+    },
+    {
+        "id": "3",
+        "name": "Hamburger",
+        "image": "hamburger_id3.jpg",
+        "category": "trending",
+        "servings": "1",
+        "ingredients":[
+            {"name":"Flour", "quatity":"1/2 cup"},
+            {"name":"Eggs", "quatity":"1"},
+            {"name":"Milk", "quatity":"1/4 cup"},
+            {"name":"Cinnamon Powder", "quatity":"1/4 tps"},
+            {"name":"Vanilla essence", "quatity":"1/4 tps"}
+        ]
     }
+
 ]
