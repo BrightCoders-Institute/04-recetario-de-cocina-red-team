@@ -6,11 +6,11 @@
         "category": "trending",
         "servings": "1",
         "ingredients":[
-            {"name":"Flour", "quatity":"1/2 cup"},
-            {"name":"Eggs", "quatity":"1"},
-            {"name":"Milk", "quatity":"1/4 cup"},
-            {"name":"Cinnamon Powder", "quatity":"1/4 tps"},
-            {"name":"Vanilla essence", "quatity":"1/4 tps"}
+            {"name":"Flour", "quantity":"1/2 cup"},
+            {"name":"Eggs", "quantity":"1"},
+            {"name":"Milk", "quantity":"1/4 cup"},
+            {"name":"Cinnamon Powder", "quantity":"1/4 tps"},
+            {"name":"Vanilla essence", "quantity":"1/4 tps"}
         ]
     },
     {
@@ -20,11 +20,11 @@
         "category": "recent",
         "servings": "1",
         "ingredients":[
-            {"name":"Flour", "quatity":"1/2 cup"},
-            {"name":"Eggs", "quatity":"1"},
-            {"name":"Milk", "quatity":"1/4 cup"},
-            {"name":"Cinnamon Powder", "quatity":"1/4 tps"},
-            {"name":"Vanilla essence", "quatity":"1/4 tps"}
+            {"name":"Flour", "quantity":"1/2 cup"},
+            {"name":"Eggs", "quantity":"1"},
+            {"name":"Milk", "quantity":"1/4 cup"},
+            {"name":"Cinnamon Powder", "quantity":"1/4 tps"},
+            {"name":"Vanilla essence", "quantity":"1/4 tps"}
         ]
     },
     {
@@ -34,11 +34,11 @@
         "category": "trending",
         "servings": "1",
         "ingredients":[
-            {"name":"Flour", "quatity":"1/2 cup"},
-            {"name":"Eggs", "quatity":"1"},
-            {"name":"Milk", "quatity":"1/4 cup"},
-            {"name":"Cinnamon Powder", "quatity":"1/4 tps"},
-            {"name":"Vanilla essence", "quatity":"1/4 tps"}
+            {"name":"Flour", "quantity":"1/2 cup"},
+            {"name":"Eggs", "quantity":"1"},
+            {"name":"Milk", "quantity":"1/4 cup"},
+            {"name":"Cinnamon Powder", "quantity":"1/4 tps"},
+            {"name":"Vanilla essence", "quantity":"1/4 tps"}
         ]
     }
 
