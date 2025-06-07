@@ -3,9 +3,9 @@ import React from "react";
 import recipesData from "../data/recipes.json"
 import RecipeCard from "./recipeCard";
 
-const TrendingList = () => {
+const TrendingList = ({query}:{query:string}) => {
 
-    const filterTrending = recipesData.filter((p) => p.category === "TRENDING");
+    const filterTrending = recipesData.filter((p) => p.category === "TRENDING").filter((p) => p.name.toLowerCase().includes(query.toLowerCase()));
 
     return(
         <View>

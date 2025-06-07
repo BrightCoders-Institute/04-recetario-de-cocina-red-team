@@ -1,8 +1,15 @@
 import { View, TextInput, StyleSheet} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
+import { useState } from "react";
   
-const SearchBar = () => {
+const SearchBar = ({onSearch}:{onSearch:(query:string) => void}) => {
+    const[query,setQuery] = useState("");
+    
+    const handleChange = (text:string) => {
+      setQuery(text);
+      onSearch(text);
+    }
     return (
         <View style={styles.search}>
         <Ionicons name="search" size={17} color="white"></Ionicons>
@@ -10,6 +17,8 @@ const SearchBar = () => {
           style={styles.input}
           placeholder="What do you want to eat?"
           placeholderTextColor="white"
+          value={query}
+          onChangeText={handleChange}
         />
         <Ionicons name="mic" size={20} color="white"></Ionicons>
       </View>

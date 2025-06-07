@@ -1,16 +1,17 @@
 import { View, StyleSheet } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import SearchBar from "../../components/SearchBar";
 import TrendingList from "../../components/TrendingList";
 import RecentList from "../../components/RecentList";
 
 const Home = () => {
+  const [query,setQuery] = useState("");
   return (
     <View style={styles.container}>
-      <SearchBar/>
+      <SearchBar onSearch={setQuery}/>
       <View style={styles.card}>
-        <TrendingList/>
-        <RecentList/>
+        <TrendingList query={query}/>
+        <RecentList query={query}/>
       </View>
     </View>
   );

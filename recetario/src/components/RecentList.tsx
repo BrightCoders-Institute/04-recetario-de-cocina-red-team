@@ -3,8 +3,10 @@ import React from "react";
 import recipesData from "../data/recipes.json"
 import RecipeCard from "./recipeCard";
 
-const RecentList = () => {
-  const filterRecent = recipesData.filter((p) => p.category === "RECENT");
+const RecentList = ({query}:{query:string}) => {
+  //const filterRecent = recipesData.filter((p) => p.category === "RECENT");
+  const filterRecent = recipesData.filter((p) => p.category === "RECENT").filter((p) => p.name.toLowerCase().includes(query.toLowerCase()));
+
     
     return(
         <View>
