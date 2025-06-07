@@ -5,14 +5,13 @@ import React from "react";
 const SearchBar = () => {
     return (
         <View style={styles.search}>
-        <Ionicons name="search" size={17} color="black"></Ionicons>
+        <Ionicons name="search" size={17} color="white"></Ionicons>
         <TextInput
           style={styles.input}
           placeholder="What do you want to eat?"
-          //onChangeText={handleSearchTextChange}
-          //value={searchText}
+          placeholderTextColor="white"
         />
-        <Ionicons name="mic" size={20} color="black"></Ionicons>
+        <Ionicons name="mic" size={20} color="white"></Ionicons>
       </View>
     );
 }
@@ -22,7 +21,8 @@ const styles = StyleSheet.create({
     width: "100%",
     marginBottom: 15,
     flexDirection: "row",
-    borderColor: "gray",
+    backgroundColor: "#343435",
+    borderColor: "#343435",
     borderWidth: 1,
     borderRadius: 10,
     alignItems: "center",
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     height: 40,
     padding: 10,
     fontSize: 17,
+    color: "white",
   }
 });
 

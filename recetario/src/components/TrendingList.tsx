@@ -14,7 +14,8 @@ const TrendingList = () => {
                 horizontal={true}
                 data={filterTrending}
                 keyExtractor={(item: any) => item.id}
-                renderItem={({ item }) => <RecipeCard recipes={item} />}
+                
+                renderItem ={({ item }) => <RecipeCard recipes={item}/>}
         />
         </View>
     );
@@ -26,7 +27,8 @@ const styles = StyleSheet.create({
     fontWeight: 400,
     color: "#AB1F60",
     marginVertical: 20,
-  }
+  },
+
 });
 
 export default TrendingList;

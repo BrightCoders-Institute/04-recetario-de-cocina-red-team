@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     color: "#AB1F60",
     marginVertical: 20,
   }
+  
 });
 
 export default RecentList;

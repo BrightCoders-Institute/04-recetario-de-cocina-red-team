@@ -18,23 +18,38 @@ export default function RecipeCard({recipes} : {recipes:Recipes}) {
     button: {
     width: 150,
     height: 150,
-    alignItems: 'center',
     borderRadius: 20,
     marginRight: 10,
-    backgroundColor: '#C4E1E6'
+    backgroundColor: "#292929"
   },
   images: {
     width:120,
     height: 100,
     marginVertical:10,
     borderRadius: 10
+  },
+   cardText: {
+    color: "white",
+    textAlign: "left",
+  },
+  largeImage: {
+    width: 200,
+    height:250,
+  },
+  largeButton: {
+    width: 200,
+    height:300,
   }
+
+
 });
+  const imageStyle = recipes.category === "recent" ? [styles.images,styles.largeImage] : styles.images;
+  const buttonStyle = recipes.category === "recent" ? [styles.button,styles.largeButton] : styles.button;
   return(
-    <TouchableOpacity style={styles.button}
+    <TouchableOpacity style={buttonStyle}
     onPress={handleDetailPress}>
-        <Image source={getImage(recipes.image)} style={styles.images}/>
-        <Text>{recipes.name}</Text>
+        <Image source={getImage(recipes.image)} style={imageStyle}/>
+        <Text style={styles.cardText}>{recipes.name}</Text>
     </TouchableOpacity>
   );
 
