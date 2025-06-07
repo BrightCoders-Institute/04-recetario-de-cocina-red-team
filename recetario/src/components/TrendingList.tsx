@@ -5,7 +5,7 @@ import RecipeCard from "./recipeCard";
 
 const TrendingList = () => {
 
-    const filterTrending = recipesData.filter((p) => p.category === "trending");
+    const filterTrending = recipesData.filter((p) => p.category === "TRENDING");
 
     return(
         <View>

@@ -43,8 +43,8 @@ export default function RecipeCard({recipes} : {recipes:Recipes}) {
 
 
 });
-  const imageStyle = recipes.category === "recent" ? [styles.images,styles.largeImage] : styles.images;
-  const buttonStyle = recipes.category === "recent" ? [styles.button,styles.largeButton] : styles.button;
+  const imageStyle = recipes.category === "RECENT" ? [styles.images,styles.largeImage] : styles.images;
+  const buttonStyle = recipes.category === "RECENT" ? [styles.button,styles.largeButton] : styles.button;
   return(
     <TouchableOpacity style={buttonStyle}
     onPress={handleDetailPress}>

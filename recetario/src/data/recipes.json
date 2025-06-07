@@ -3,7 +3,7 @@
         "id": "1",
         "name": "HotCakes",
         "image": "hotcakes_id1.jpg",
-        "category": "trending",
+        "category": "TRENDING",
         "servings": "1",
         "ingredients":[
             {"name":"Flour", "quantity":"1/2 cup"},
@@ -17,7 +17,7 @@
         "id": "2",
         "name": "Pizza",
         "image": "pizza_id2.jpg",
-        "category": "recent",
+        "category": "RECENT",
         "servings": "1",
         "ingredients":[
             {"name":"Flour", "quantity":"1/2 cup"},
@@ -31,7 +31,7 @@
         "id": "3",
         "name": "Hamburger",
         "image": "hamburger_id3.jpg",
-        "category": "trending",
+        "category": "TRENDING",
         "servings": "1",
         "ingredients":[
             {"name":"Flour", "quantity":"1/2 cup"},

@@ -4,7 +4,7 @@ import recipesData from "../data/recipes.json"
 import RecipeCard from "./recipeCard";
 
 const RecentList = () => {
-  const filterRecent = recipesData.filter((p) => p.category === "recent");
+  const filterRecent = recipesData.filter((p) => p.category === "RECENT");
     
     return(
         <View>
