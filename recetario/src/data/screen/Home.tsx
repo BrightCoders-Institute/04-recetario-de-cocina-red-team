@@ -1,39 +1,16 @@
-import { View, Text, TextInput, StyleSheet, FlatList } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { View, StyleSheet } from "react-native";
 import React from "react";
-import recipesData from "../recipes.json";
-import RecipeCard from "../../components/recipeCard";
+import SearchBar from "../../components/SearchBar";
+import TrendingList from "../../components/TrendingList";
+import RecentList from "../../components/RecentList";
 
 const Home = () => {
-  const filterTrending = recipesData.filter((p) => p.category === "trending");
-  const filterRecent = recipesData.filter((p) => p.category === "recent");
   return (
     <View style={styles.container}>
-      <View style={styles.search}>
-        <Ionicons name="search" size={17} color="black"></Ionicons>
-        <TextInput
-          style={styles.input}
-          placeholder="What do you want to eat?"
-          //onChangeText={handleSearchTextChange}
-          //value={searchText}
-        />
-        <Ionicons name="mic" size={20} color="black"></Ionicons>
-      </View>
+      <SearchBar/>
       <View style={styles.card}>
-        <Text style={styles.title}>TRENDING</Text>
-        <FlatList
-          horizontal={true}
-          data={filterTrending}
-          keyExtractor={(item: any) => item.id}
-          renderItem={({ item }) => <RecipeCard recipes={item} />}
-        />
-        <Text style={styles.title}>RECENT</Text>
-        <FlatList
-          horizontal={true}
-          data={filterRecent}
-          keyExtractor={(item: any) => item.id}
-          renderItem={({ item }) => <RecipeCard recipes={item} />}
-        />
+        <TrendingList/>
+        <RecentList/>
       </View>
     </View>
   );
@@ -43,31 +20,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 30,
-  },
-
-  search: {
-    width: "100%",
-    marginBottom: 15,
-    flexDirection: "row",
-    borderColor: "gray",
-    borderWidth: 1,
-    borderRadius: 10,
-    alignItems: "center",
-    paddingHorizontal: 10,
-    marginTop: 50,
-  },
-
-  input: {
-    flex: 1,
-    height: 40,
-    padding: 10,
-    fontSize: 17,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: 400,
-    color: "#AB1F60",
-    marginVertical: 20,
   },
   card: {
     justifyContent: "center",
