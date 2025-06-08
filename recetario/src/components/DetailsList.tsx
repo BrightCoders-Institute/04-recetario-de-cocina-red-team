@@ -3,6 +3,7 @@ import { RouteProp, useRoute } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/AppNavigator";
 import { View, Text, Image, StyleSheet, FlatList } from "react-native";
 import { getImage } from "../utils/getImage";
+import OverlayIcons from "./OverlayIcons";
 
 type DetailsRouteProp = RouteProp<RootStackParamList, "Details">;
 
@@ -13,6 +14,7 @@ const DetailsList = () => {
   return (
     <View style={styles.container}>
       <Image source={getImage(recipes.image)} style={styles.backgroundImage} />
+      <OverlayIcons/>
       <Text style={styles.categoryText}>{recipes.category}</Text>
       <Text style={styles.nameText}>{recipes.name}</Text>
       <Text style={styles.ingredientsText}>Ingredients</Text>
@@ -92,6 +94,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color:"white",
     marginLeft: 20,
-  }
+  },
 
 });
