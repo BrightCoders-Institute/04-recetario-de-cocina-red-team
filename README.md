@@ -1,4 +1,4 @@
-![BrightCoders Logo](img/logo.png)
+![BrightCoders Logo](../04-recetario-de-cocina-red-team/recetario/img/logo.png)
 
 # RECETARIO DE COCINA 🥙🌮🍕
 
